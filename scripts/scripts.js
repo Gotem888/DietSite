@@ -165,11 +165,11 @@ const createContent = (diets) => {
 };
 
 returnButton.addEventListener("click", (e) => {
-  e.target = generateNavElements(DIETS);
-  contentWrapper.classList.toggle("visible");
+  contentWrapper.classList.remove("visible");
   contentWrapper.innerHTML = `
       <div class="products__wrapper"><h2>Products</h2></div>
   `;
+  e.target = generateNavElements(DIETS);
   e.target.classList.remove("visible");
 });
 

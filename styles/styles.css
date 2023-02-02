@@ -118,17 +118,27 @@ header {
 .to__main {
   position: fixed;
   right: 5vw;
-  top: 20vh;
+  top: 10vh;
   cursor: pointer;
   font-family: Roboto;
   font-size: 1.5rem;
-  border: 1px solid #000;
+  font-weight: 600;
+  border: none;
   border-radius: 2rem;
-  padding: 0.5rem;
-  filter: drop-shadow(1px 4px 3px #000000);
+  padding: 0.8rem;
+  filter: drop-shadow(1px 3px 2px #323232);
   box-shadow: 3px 1px 25px 0 #2f2f2f;
   visibility: hidden;
+  color: #2c2390;
+  box-shadow: 0 0 3px 1px inset #ffffff, 1px 1px 10px 1px #372bb6;
+  transition: 0.5s;
 }
+
+.to__main:hover {
+  box-shadow: 3px 4px 30px 30px inset #ffffff, 3px 3px 30px 10px #372bb6,
+    1px 1px 3px 1px inset #372bb6;
+}
+
 .visible {
   visibility: visible;
 }
