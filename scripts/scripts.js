@@ -44,6 +44,11 @@ const DIETS = [
         url: "https://c5a822xi14exfy2spryc0ves8l.hop.clickbank.net/",
         img: "./img/visualimpact.png",
       },
+      {
+        title: "Eat STOP",
+        url: "https://ddef7--cv1aw7wbaol0pyem28v.hop.clickbank.net",
+        img: "./img/family.png",
+      },
     ],
   },
   {
@@ -72,6 +77,11 @@ const DIETS = [
         title: "DuoTrim",
         url: "https://1187betd30fp7say69xhxc5le4.hop.clickbank.net",
         img: "./img/duotrim.png",
+      },
+      {
+        title: "Green Juice",
+        url: "https://ede7350k20mlcp3lxdfgt2jpcp.hop.clickbank.net/",
+        img: "./img/greenjuice.png",
       },
       {
         title: "Ikaria",
@@ -176,6 +186,7 @@ returnButton.addEventListener("click", (e) => {
 nav.addEventListener("click", (e) => {
   const linkName = e.target.id;
   const result = filterProductsData(DIETS, linkName);
+  console.log(result);
   let productsFind = result[0].products;
   contentWrapper.classList.toggle("visible");
   generateModalElements(productsFind);
