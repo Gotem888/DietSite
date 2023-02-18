@@ -31,14 +31,14 @@ header {
   color: rgba(120, 124, 185, 0.742);
 }
 .nav {
-  width: 60%;
+  width: 80%;
   margin-bottom: 50px;
   border-radius: 25px;
   display: flex;
   justify-content: center;
 }
 .nav__list {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-flow: wrap row;
   justify-content: center;
@@ -52,7 +52,7 @@ header {
   box-sizing: border-box;
   position: relative;
   transition-duration: 200ms;
-  width: 440px;
+  width: 500px;
   height: 240px;
   cursor: pointer;
   text-align: center;
@@ -108,7 +108,9 @@ header {
   border: 1px solid #000;
   border-radius: 25px;
   overflow: hidden;
-  /* margin-bottom: 100px; */
+  background-color: #abaffd;
+  box-shadow: 1px 2px 5px 1px inset #3c46ff;
+  margin-bottom: 100px;
   /* box-shadow: 0 8px 10px 0 #2f2f2f;
   filter: drop-shadow(0px 4px 5px #292828); */
   transition-duration: 200ms;
@@ -226,6 +228,7 @@ header {
 }
 a {
   text-decoration-line: none;
+  margin-bottom: 25px;
 }
 .title {
   position: absolute;
@@ -234,6 +237,7 @@ a {
   font-weight: 400;
   font-family: Roboto;
   margin-bottom: 10px;
+  background-color: rgba(239, 245, 250, 0.57);
   color: #2c2390;
   text-align: center;
   padding: 5px 10px;
@@ -250,14 +254,16 @@ a {
   font-weight: 500;
 }
 .products__wrapper {
+  text-shadow: 1px 1px 4px #1f1f1f;
   font-family: Roboto;
   font-size: 50px;
   font-weight: 800;
   position: absolute;
   top: 10px;
+  color: #0a1080;
 }
 
-@media only screen and (min-width: 350px) and (max-width: 800px) {
+@media only screen and (min-width: 350px) and (max-width: 1094px) {
   /* Burger */
   body {
     display: flex;
