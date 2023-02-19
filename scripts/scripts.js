@@ -106,7 +106,17 @@ const modal = document.querySelector(".modal");
 const modalContent = document.querySelector("#modal-content");
 const link = document.querySelector(".diets__title");
 const returnButton = document.querySelector(".to__main");
+const arrow = document.querySelector(".arrow__wrapper");
 const productsWrapper = document.querySelector(".products__wrapper");
+const screenY = window.innerHeight / 2;
+
+window.onscroll = function () {
+  if (pageYOffset > screenY) {
+    arrow.classList.remove("visible");
+  } else if (returnButton.classList.contains("visible")) {
+    arrow.classList.add("visible");
+  }
+};
 
 burger.addEventListener("click", () => {
   nav.classList.toggle("visible");
@@ -181,6 +191,7 @@ returnButton.addEventListener("click", (e) => {
   `;
   e.target = generateNavElements(DIETS);
   e.target.classList.remove("visible");
+  e.target = arrow.classList.remove("visible");
 });
 
 nav.addEventListener("click", (e) => {
@@ -196,5 +207,6 @@ nav.addEventListener("click", (e) => {
   const result = filterData(DIETS, linkName);
   nav.innerHTML = createContent(result[0]);
   e.target = returnButton.classList.add("visible");
+  e.target = arrow.classList.add("visible");
 });
 generateNavElements(DIETS);
